@@ -7,10 +7,16 @@
         <h1>Image bigger on click</h1>
         <p>Try clickig the image</p>
         <img src="E1D99803-DB2A-49BD-A41D-5735C09AF278_1_105_c.jpeg" height="200px" alt="an image" title="2 Sulpur-crested Cockatoos over Tower Hills reserve" style="border: 2px solid black;">
+        <p>Now try clicking the image again to make it smaller</p>
         <script>
-            var img = document.querySelector("img");
-            img.addEventListener("click", function() {
-                img.style.height = "400px";
+            // create image size toggle 400px to 200px
+            var img = document.querySelector('img');
+            img.addEventListener('click', function() {
+                if (img.getAttribute('height') == '200px') {
+                    img.setAttribute('height', '400px');
+                } else {
+                    img.setAttribute('height', '200px');
+                }
             });
             </script>
     </body>

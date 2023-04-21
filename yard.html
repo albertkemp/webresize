@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #calculator {
+                background-color: rgb(208, 208, 208);
+                border: 1px solid black;
+                padding: 20px;
+                width: 50%;
+                min-height: 250px;
+                color: black;
+            }
+            #output {
+                font-size: 24px;
+            }
+            body {
+                font-family: 'Arial', sans-serif;
+            }
+        </style>
+        <title>Meter-Yard Calculator</title>
+    </head>
+    <body>
+        <h1>Meter-Yard Calculator</h1>
+        <p>There are lots of measurement systems, and you could very well be tired of trying to convert meters to yards. Using a simple calculation, you can just punch an amount of meters into the input box and it will return the yard equivelant.</p>
+        <h2 style="color: red;">NOTE: THIS IS NOT FOR SALE AND YOU HAVE NO RIGHT TO COPY THIS CODE FOR PROFIT</h2>
+        <div id="calculator">
+            <h2>The Calculator:</h2>
+            <input id="userInput" placeholder="type in an amount of meters..." type="number"><button onclick="meterConvert()">Convert</button>
+        </div>
+        <h2>Output:</h2>
+        <p id="output"></p>
+        <p>We also have many other converters including:</p>
+        <ul>
+            <li>Inch-centimeter Convert</li>
+            <li>Kelvin-Celsius-Fahrenheit Convert</li>
+            <li><a href="kilometer.html">Kilometer-Mile Convert</a></li>
+            <li>Uppercase Converter</li>
+            <li><a href="meter.html">Meter-Foot Converter</a></li>
+            <li>String Reverser</li>
+        </ul>
+        <p>Also make sure to check out my JavaScript tutorial at <a href="https://albertkemp.github.io/jstutorial/learnjs.html">https://albertkemp.github.io/jstutorial/learnjs.html</a></p>
+        <footer>
+            <p>Thank you for using this converter. Contact me with <a href="mailto:birddiscussion@gmail.com">birddiscussion@gmail.com</a> &copy; Albert Kemp 2023 Meter-Yard Converter. All rights reserved.</p>
+        </footer>
+        <script>
+            function meterConvert() {
+                var meters = document.getElementById("userInput").value;
+                var yards = meters*1.0936;
+                document.getElementById("output").innerHTML = "meters = " + meters + ", yards = " + yards;
+            }
+        </script>
+    </body>
+</html>

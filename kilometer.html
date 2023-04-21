@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #calculator {
+                background-color: rgb(208, 208, 208);
+                border: 1px solid black;
+                padding: 20px;
+                width: 50%;
+                min-height: 250px;
+                color: black;
+            }
+            #output {
+                font-size: 24px;
+            }
+            body {
+                font-family: 'Arial', sans-serif;
+            }
+        </style>
+        <title>Kilometer-Mile Convert</title>
+    </head>
+    <body>
+        <h1>Kilometer-Mile Convert</h1>
+        <p>When you need to convert kilometres to miles, come here! All you have to do is type a number of kilometres, and it will convert them to miles.</p>
+        <h2 style="color: red;">NOTE: THIS IS NOT FOR SALE AND YOU HAVE NO RIGHT TO COPY THIS CODE FOR PROFIT</h2>
+        <div id="calculator">
+            <h2>The Converter:</h2>
+            <input type="number" placeholder="Enter a number of kilometers..." id="userInput"><button onclick="convert()">Convert</button>
+        </div>
+        <h2>Output:</h2>
+        <p id="output"></p>
+        <p>I have also made many other converters including:</p>
+        <ul>
+            <li>Inch-centimeter Convert</li>
+            <li>Kelvin-Celsius-Fahrenheit Convert</li>
+            <li><a href="meter.html">Foot-Meter Convert</a></li>
+            <li>Uppercase Converter</li>
+            <li>String Reverser</li>
+            <li><a href="yard.html">Meter-Yard Converter</a></li>
+        </ul>
+        <p>Make sure to check out my JavaScript tutorial at <a href="https://albertkemp.github.io/jstutorial/learnjs.html">https://albertkemp.github.io/jstutorial/learnjs.html</a></p>
+        <footer>
+            <p>Thank you for using this converter. Contact me with <a href="mailto:birddiscussion@gmail.com">birddiscussion@gmail.com</a> &copy; Copyright Kilometer-Mile Convert 2023 Albert Kemp. All rights reserved.</p>
+        </footer>
+        <script>
+            function convert() {
+                var kilometers = document.getElementById("userInput").value;
+                var miles = kilometers*0.62137119;
+                document.getElementById("output").innerHTML = "kilometers = " + kilometers + ", miles = " + miles;
+            }
+        </script>
+    </body>
+</html>
